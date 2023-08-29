@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from deals.models import Deals
+from apps.deals.models import Deals
 
 
 class DealsSerializer(serializers.ModelSerializer):

@@ -13,3 +13,5 @@ class DealsViewSet(
     filter_backends = (DjangoFilterBackend,)
     queryset = Deals.objects.all()
     # serializer_class = DealsSerializer
+
+
