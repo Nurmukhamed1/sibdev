@@ -1,1 +1,0 @@
-from .deals import Deals

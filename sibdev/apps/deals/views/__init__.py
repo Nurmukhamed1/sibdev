@@ -1,2 +1,2 @@
-from .views import DealsViewSet
-from .upload import FileUploadView
+from .deals import DealsViewSet
+from .upload import UploadView
