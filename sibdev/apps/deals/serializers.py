@@ -4,14 +4,14 @@ from apps.deals.models import Deals
 
 
 class DealsSerializer(serializers.ModelSerializer):
-    username = serializers.CharField(source="customer")
+    username = serializers.CharField()
     spent_money = serializers.IntegerField()
-    # gems = serializers.BooleanField()
+    gems = serializers.ListSerializer(child=serializers.CharField())
 
     class Meta:
         model = Deals
         fields = (
             "username",
             "spent_money",
-            # "gems",
+            "gems",
         )
