@@ -16,6 +16,10 @@ class DealsViewSet(viewsets.GenericViewSet):
 
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
-        queryset = queryset.values('customer').annotate(spent_money=Sum('total')).order_by('-spent_money')[:5]
         serializer = self.get_serializer(queryset, many=True)
         return Response({"response": serializer.data})
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        queryset = queryset.values('customer').annotate(spent_money=Sum('total')).order_by('-spent_money')[:5]
+        return queryset

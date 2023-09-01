@@ -23,7 +23,7 @@ sys.path.insert(0, os.path.join(BASE_DIR.parent, "config"))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-m-e5f+nfzt$#ga+pqt2e9-=t^m%u6s-n--e++91rgs$19m=i!f'
 
-ALLOWED_HOSTS = ["127.0.0.1", ]
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
